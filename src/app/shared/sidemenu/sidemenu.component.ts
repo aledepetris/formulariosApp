@@ -1,19 +1,21 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 interface MenuItem {
   texto: string;
-  ruta:  string;
-
+  ruta: string;
 }
+
 
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
-  styles: [`
-    li {
-      cursor: pointer;
-    }
-  `]
+  styles: [
+    `
+      li {
+        cursor:pointer;
+      }
+    `
+  ]
 })
 export class SidemenuComponent {
 
@@ -29,8 +31,8 @@ export class SidemenuComponent {
     {
       texto: 'Switches',
       ruta: './template/switches'
-    }
-  ]
+    },
+  ];
 
   reactiveMenu: MenuItem[] = [
     {
@@ -44,7 +46,19 @@ export class SidemenuComponent {
     {
       texto: 'Switches',
       ruta: './reactive/switches'
-    }
+    },
+  ];
+
+
+  authMenu: MenuItem[] = [
+    {
+      texto: 'Registro',
+      ruta: './auth/registro'
+    },
+    {
+      texto: 'Login',
+      ruta: './auth/login'
+    },
   ]
 
 }
